@@ -5,12 +5,12 @@ FILE_NAME = "library.json"
 
 def load_books():
     if os.path.exists(FILE_NAME):
-        with open(FILE_NAME, "r", encoding="utf-8") as file:
+        with open(FILE_NAME, "r", encoding="utf-8") as fil:
             return json.load(file)
     return []
 
 def save_books(books):
-    with open(FILE_NAME, "w", encoding="utf-8") as file:
+    with open(FILE_NAME, "w", encoding="utf-8") as fil:
         json.dump(books, file, indent=4, ensure_ascii=False)
 
 def add_book(books):
