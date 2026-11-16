@@ -5,7 +5,7 @@ FILE_NAME = "library.json"
 
 def load_books():
     if os.path.exists(FILE_NAME):
-        with open(FILE_NAME, "r", encoding="utf-8") as fil:
+        with open(FILE_NAME, "r", encoding="utf-8") as file:
             return json.load(file)
     return []
 
